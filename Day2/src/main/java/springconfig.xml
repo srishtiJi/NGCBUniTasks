@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="Person" id="p" name="person">
+        <property name="name" value="Srishti"></property>
+        <property name="pid" value="100"></property>
+    </bean>
+    <bean class="Product" id="prod" name="product">
+        <property name="brandName" value="samsung"></property>
+        <property name="pid" value="100"></property>
+    </bean>
+    <bean class="Customer" id="cust" name="customer">
+        <property name="cusId" value="100"></property>
+        <property name="cusName" value="Srishti"></property>
+    </bean>
+    <bean class="Customer" id="cus" name="customer">
+        <property name="oid" value="100"></property>
+        <property name="quantity" value="2"></property>
+        <property name="bill" value="200"></property>
+        <property name="product" ref="prod"></property>
+        <constructor-arg name="customer" ref="cus" value="Srishti"></constructor-arg>
+    </bean>
+
+
+</beans>
