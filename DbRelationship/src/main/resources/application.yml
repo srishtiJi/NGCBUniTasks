@@ -1,0 +1,19 @@
+#spring.main.banner-mode=off
+server:
+port: 9090
+spring:
+  #main:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    driver-class-name: org.h2.Driver
+    username: root
+    password: root1
+  jpa:
+    database-platform: org.hibernate.dialect.H2dialect
+  h2:
+    console:
+      enabled: True
+application:
+  name: My Sample App
+  version: 1.222
+
